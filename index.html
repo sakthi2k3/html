@@ -300,972 +300,133 @@ nav1 #c1 .links1{
     </nav1>
   </div>
   <div>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
   <style>
-   @media (min-width: 576px) { 
-    .details{
-      font-size: x-large;
+    html,
+    body {
+      position: relative;
+      height: 100%;
     }
 
-   }
-
-    .row1{
-        display: flex;
-        flex-flow: row;
-    }
-    .column1{
-        display: flex;
-        flex-flow: column;
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
     }
 
-
-/*----------------------------*\
-      Coverflow Album Slider 
-\*-----------------------------*/
-.coverflow {
-  position: relative;
-  height: 460px;
-  padding: 30px;
-  overflow: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}
-
-.coverflow__image {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 400px;
-  height: 400px;
-  -webkit-transition: all 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 350ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.coverflow__image[data-coverflow-index] {
-  position: absolute;
-  left: 50%;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-
-.coverflow__image[data-coverflow-index]:before {
-  content: " ";
-  z-index: 1;
-  position: absolute;
-  top: 300px;
-  width: 100%;
-  height: 10%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 5;
-  -webkit-transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 4;
-  -webkit-transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 3;
-  -webkit-transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 2;
-  -webkit-transform: translateX(640px) scale(-0.4) rotateY(-45deg);
-  transform: translateX(640px) scale(-0.4) rotateY(-45deg);
-  opacity: -0.66667;
-}
-
-.coverflow[data-coverflow-position="1"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 1;
-  -webkit-transform: translateX(730px) scale(-0.55) rotateY(-45deg);
-  transform: translateX(730px) scale(-0.55) rotateY(-45deg);
-  opacity: -0.83333;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 5;
-  -webkit-transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 4;
-  -webkit-transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 3;
-  -webkit-transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="2"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 2;
-  -webkit-transform: translateX(640px) scale(-0.4) rotateY(-45deg);
-  transform: translateX(640px) scale(-0.4) rotateY(-45deg);
-  opacity: -0.66667;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 5;
-  -webkit-transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 4;
-  -webkit-transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="3"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 3;
-  -webkit-transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  transform: translateX(550px) scale(-0.25) rotateY(-45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 5;
-  -webkit-transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="4"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 4;
-  -webkit-transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  transform: translateX(460px) scale(-0.1) rotateY(-45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="5"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 5;
-  -webkit-transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  transform: translateX(370px) scale(0.05) rotateY(-45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 5;
-  -webkit-transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="6"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 6;
-  -webkit-transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  transform: translateX(280px) scale(0.2) rotateY(-45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 4;
-  -webkit-transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 5;
-  -webkit-transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="7"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 7;
-  -webkit-transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  transform: translateX(190px) scale(0.35) rotateY(-45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 3;
-  -webkit-transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 4;
-  -webkit-transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 5;
-  -webkit-transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="8"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 8;
-  -webkit-transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  transform: translateX(100px) scale(0.5) rotateY(-45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 2;
-  -webkit-transform: translateX(-1040px) scale(-0.4) rotateY(45deg);
-  transform: translateX(-1040px) scale(-0.4) rotateY(45deg);
-  opacity: -0.66667;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 3;
-  -webkit-transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 4;
-  -webkit-transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 5;
-  -webkit-transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.coverflow[data-coverflow-position="9"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 9;
-  -webkit-transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  transform: translateX(10px) scale(0.65) rotateY(-45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="1"] {
-  z-index: 1;
-  -webkit-transform: translateX(-1130px) scale(-0.55) rotateY(45deg);
-  transform: translateX(-1130px) scale(-0.55) rotateY(45deg);
-  opacity: -0.83333;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="2"] {
-  z-index: 2;
-  -webkit-transform: translateX(-1040px) scale(-0.4) rotateY(45deg);
-  transform: translateX(-1040px) scale(-0.4) rotateY(45deg);
-  opacity: -0.66667;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="3"] {
-  z-index: 3;
-  -webkit-transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  transform: translateX(-950px) scale(-0.25) rotateY(45deg);
-  opacity: -0.5;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="4"] {
-  z-index: 4;
-  -webkit-transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  transform: translateX(-860px) scale(-0.1) rotateY(45deg);
-  opacity: -0.33333;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="5"] {
-  z-index: 5;
-  -webkit-transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  transform: translateX(-770px) scale(0.05) rotateY(45deg);
-  opacity: -0.16667;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="6"] {
-  z-index: 6;
-  -webkit-transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  transform: translateX(-680px) scale(0.2) rotateY(45deg);
-  opacity: 0;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="7"] {
-  z-index: 7;
-  -webkit-transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  transform: translateX(-590px) scale(0.35) rotateY(45deg);
-  opacity: 0.16667;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="8"] {
-  z-index: 8;
-  -webkit-transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  transform: translateX(-500px) scale(0.5) rotateY(45deg);
-  opacity: 0.33333;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="9"] {
-  z-index: 9;
-  -webkit-transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  transform: translateX(-410px) scale(0.65) rotateY(45deg);
-  opacity: 0.5;
-}
-
-.coverflow[data-coverflow-position="10"] .coverflow__image[data-coverflow-index="10"] {
-  z-index: 10;
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
-  box-shadow: 0 1px 25px 10px rgba(0, 0, 0, 0.6);
-}
-
-.prev-arrow,
-.next-arrow {
-  cursor: pointer;
-  z-index: 10;
-  position: absolute;
-  top: 50%;
-  padding: 1.5rem 2rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 3rem;
-  line-height: 3rem;
-  background: transparent;
-  border-radius: 1rem;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: color 200ms, background 200ms;
-  transition: color 200ms, background 200ms;
-}
-
-.prev-arrow:hover,
-.next-arrow:hover,
-.prev-arrow:focus,
-.next-arrow:focus {
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.prev-arrow {
-  left: 0%;
-}
-
-.prev-arrow:before {
-  content: "❮";
-}
-
-.next-arrow {
-  right: 0%;
-}
-
-.next-arrow:after {
-  content: "❯";
-}
-</style>
-<div class="row">
-  
-  <div class="column" style=" margin-left: 2vh; margin-top: 1vh;">
-      <img src="https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810" ALIGN=”left”  alt="Los Angeles" style="width: 25vw; height: 30vw; float: left; margin-right: 5vh;">
-  </div>    
-      <div class="column" >
-      <h4 style="font-size: 2vw;" class="details">
-          Name: Frozen<br>
-          Genre: Adventure,Animated,Comedy<br>
-          ImbdRating: 7.4/10<br>
-          Director: Chris Buck, Jennifer Lee<br>
-          Writer: Chris Buck<br>
-          Running Time: 108 minutes<br>
+    .swiper-container {
+      width: 100%;
+      height: 51%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+     display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; display: -webkit-box;
       
-          Summary: When their kingdom becomes trapped in perpetual winter, fearless Anna (Kristen Bell) joins forces with mountaineer Kristoff (Jonathan Groff) and his reindeer sidekick to find Anna's sister, Snow Queen Elsa (Idina Menzel), and break her icy spell. Although their epic journey leads them to encounters with mystical trolls, a comedic snowman (Josh Gad), harsh conditions, and magic at every turn, Anna and Kristoff bravely push onward in a race to save their kingdom from winter's cold grip.<br>
-      
-         
-      </h4>
-       </div>
- 
+    }
+  </style>
+</head>
 
-      </div>
-      <div >
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
 
-          <h1>
-              Trailer: 
-          </h1>
-      <iframe width="93%" height="500vw" src="https://www.youtube.com/embed/L0MK7qz13bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 7vh; margin-right: 7vh;"></iframe>
-      </div>
-        
-<section class="row">
-  <div class="nine columns">
-    <div class="coverflow top10 bot10">
-      <a class="prev-arrow"></a>
-      <a href=""><img src="https://api.time.com/wp-content/uploads/2014/02/frozen-let-it-go-covers.jpg" class="coverflow__image" /></a>
-      <a href=""><img src="https://lumiere-a.akamaihd.net/v1/images/pp_frozen_herobanner_mobile_20501_ae840c59.jpeg?region=0,0,1024,768&width=960"" class="coverflow__image" /></a>
-      <a href=""><img src="https://etimg.etb2bimg.com/photo/72118626.cms" class="coverflow__image" /></a>
-      <a href=""><img src="https://townsquare.media/site/442/files/2018/02/frozen-broadway.jpg?w=980&q=75" class="coverflow__image" /></a>
-      <a href=""><img src="https://i.insider.com/52e981fe69beddf605e84e7a" class="coverflow__image" /></a>
-      <a class="next-arrow"></a>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-</section>
-<script>
-  /*------------------------------
-        Album Cover Slider
---------------------------------*/
-//start added by Chase
-var a = document.getElementsByTagName("a");
-var cfImg = document.getElementsByClassName("coverflow__image")
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 100%;"></div>
 
-var scaleI = 0;
-for (scaleI; scaleI < a.length; scaleI++) {
-  if (scaleI === 3) {
-    continue;
-  } else {
-    a[scaleI].style.cursor = "default";
-    a[scaleI].addEventListener("click", prevDef);
-  }
-}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
-function prevDef(e) {
-  e.preventDefault();
-}
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-function forScale(coverflowPos) {
-  for (scaleI = 0; scaleI < a.length; scaleI++) {
-    a[scaleI].style.cursor = "default";
-    a[scaleI].addEventListener("click", prevDef);
-  }
-  for (scaleI = 0; scaleI < cfImg.length; scaleI++) {
-    if (cfImg[scaleI].getAttribute("data-coverflow-index") == coverflowPos) {
-      cfImg[scaleI].parentElement.style.cursor = "pointer";
-      cfImg[scaleI].parentElement.removeEventListener("click", prevDef);
-    }
-  }
-}
-//end added by Chase
+  <script src="../package/swiper-bundle.min.js"></script>
 
-function setupCoverflow(coverflowContainer) {
-  var coverflowContainers;
-
-  if (typeof coverflowContainer !== "undefined") {
-    if (Array.isArray(coverflowContainer)) {
-      coverflowContainers = coverflowContainer;
-    } else {
-      coverflowContainers = [coverflowContainer];
-    }
-  } else {
-    coverflowContainers = Array.prototype.slice.apply(document.getElementsByClassName('coverflow'));
-  }
-
-  coverflowContainers.forEach(function(containerElement) {
-    var coverflow = {};
-    var prevArrows, nextArrows;
-
-    //capture coverflow elements
-    coverflow.container = containerElement;
-    coverflow.images = Array.prototype.slice.apply(containerElement.getElementsByClassName('coverflow__image'));
-    coverflow.position = Math.floor(coverflow.images.length / 2) + 1;
-
-    //set indicies on images
-    coverflow.images.forEach(function(coverflowImage, i) {
-      coverflowImage.dataset.coverflowIndex = i + 1;
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-
-    //set initial position
-    coverflow.container.dataset.coverflowPosition = coverflow.position;
-
-    //get prev/next arrows
-    prevArrows = Array.prototype.slice.apply(coverflow.container.getElementsByClassName("prev-arrow"));
-    nextArrows = Array.prototype.slice.apply(coverflow.container.getElementsByClassName("next-arrow"));
-
-    //add event handlers
-    function setPrevImage() {
-      coverflow.position = Math.max(1, coverflow.position - 1);
-      coverflow.container.dataset.coverflowPosition = coverflow.position;
-      //call the functin forScale added
-      forScale(coverflow.position);
-    }
-
-    function setNextImage() {
-      coverflow.position = Math.min(coverflow.images.length, coverflow.position + 1);
-      coverflow.container.dataset.coverflowPosition = coverflow.position;
-      //call the function Chase added
-      forScale(coverflow.position);
-    }
-
-    function jumpToImage(evt) {
-      coverflow.position = Math.min(coverflow.images.length, Math.max(1, evt.target.dataset.coverflowIndex));
-      coverflow.container.dataset.coverflowPosition = coverflow.position;
-      //start added by Chase
-      setTimeout(function() {
-        forScale(coverflow.position);
-      }, 1);
-      //end added by Chase
-    }
-
-    function onKeyPress(evt) {
-      switch (evt.which) {
-        case 37: //left arrow
-          setPrevImage();
-          break;
-        case 39: //right arrow
-          setNextImage();
-          break;
-      }
-    }
-    prevArrows.forEach(function(prevArrow) {
-      prevArrow.addEventListener('click', setPrevImage);
-    });
-    nextArrows.forEach(function(nextArrow) {
-      nextArrow.addEventListener('click', setNextImage);
-    });
-    coverflow.images.forEach(function(image) {
-      image.addEventListener('click', jumpToImage);
-    });
-    window.addEventListener('keyup', onKeyPress);
-  });
-}
-
-setupCoverflow();
-</script>
-</div>
-
+  </script>
 </body>
+
 </html>
