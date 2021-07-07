@@ -300,138 +300,90 @@ nav1 #c1 .links1{
     </nav1>
   </div>
   <div>
-      <!DOCTYPE html>
-<title>Movie</title>
+      <head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<style>
-  @media (min-width: 576px) { 
-    .details{
-      font-size: x-large;
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
     }
 
-   }
-
-    .row{
-        display: flex;
-        flex-flow: row;
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
-    .column{
-        display: flex;
-        flex-flow: column;
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+
     }
-   
-</style>
-<div class="row">
-  <div class="column" style=" margin-left: 2vh; margin-top: 1vh;">
-      <img src="https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810" ALIGN=”left”  alt="Los Angeles" style="width: 25vw; height: 30vw; float: left; margin-right: 5vh;">
-  </div>    
-      <div class="column" >
-      <h4 style="font-size: 2vw;" class="details">
-          Name: Frozen<br>
-          Genre: Adventure,Animated,Comedy<br>
-          ImbdRating: 7.4/10<br>
-          Director: Chris Buck, Jennifer Lee<br>
-          Writer: Chris Buck<br>
-          Running Time: 108 minutes<br>
-      
-          Summary: When their kingdom becomes trapped in perpetual winter, fearless Anna (Kristen Bell) joins forces with mountaineer Kristoff (Jonathan Groff) and his reindeer sidekick to find Anna's sister, Snow Queen Elsa (Idina Menzel), and break her icy spell. Although their epic journey leads them to encounters with mystical trolls, a comedic snowman (Josh Gad), harsh conditions, and magic at every turn, Anna and Kristoff bravely push onward in a race to save their kingdom from winter's cold grip.<br>
-      
-         
-      </h4>
-       </div>
- 
+  </style>
+</head>
 
-      </div>
-      <div >
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(https://api.time.com/wp-content/uploads/2014/02/frozen-let-it-go-covers.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(https://wallpaperscute.club/wp-content/uploads/2019/09/df577106d8fce564f4deb69ad8695888-507x641.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(https://etimg.etb2bimg.com/photo/72118626.cms)"></div>
+        <div class="swiper-slide" style="background-image:url(https://townsquare.media/site/442/files/2018/02/frozen-broadway.jpg?w=980&q=75)"></div>
+        <div class="swiper-slide" style="background-image:url(https://i.insider.com/52e981fe69beddf605e84e7a)"></div>
+        <div class="swiper-slide" style="background-image:url(https://i.pinimg.com/originals/4f/e0/5c/4fe05c0a2d170a2261e6501618f913bd.png)"></div>
+        <div class="swiper-slide" style="background-image:url(https://images.indianexpress.com/2019/11/Frozen-759-3.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(https://c4.wallpaperflare.com/wallpaper/317/743/712/movie-frozen-2-anna-frozen-elsa-frozen-kristoff-frozen-hd-wallpaper-preview.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(https://cdn.wallpapersafari.com/47/90/ix2Q7m.jpg)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
-          <h1>
-              Trailer: 
-          </h1>
-      <iframe width="93%" height="500vw" src="https://www.youtube.com/embed/L0MK7qz13bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 7vh; margin-right: 7vh;"></iframe>
-      </div>
-        
-        <div>
-            <h1>Images:</h1>
-            <head>
-                <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-              
-                <meta charset="utf-8">
-                <title>Swiper demo</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-              
-                <!-- Link Swiper's CSS -->
-                <link rel="stylesheet" href="../package/swiper-bundle.min.css">
-              
-                <!-- Demo styles -->
-                <style>
-                  body {
-                    background: #fff;
-                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                    font-size: 14px;
-                    color: #000;
-                    margin: 0;
-                    padding: 0;
-                  }
-              
-                  .swiper-container {
-                    width: 100%;
-                    padding-top: 50px;
-                    padding-bottom: 50px;
-                  }
-              
-                  .swiper-slide {
-                    background-position: center;
-                    background-size: cover;
-                    width: 300px;
-                    height: 300px;
-                    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
-              
-                  }
-                </style>
-              </head>
-              
-              <body>
-                <!-- Swiper -->
-                <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                      <div class="swiper-slide" style="background-image:url(https://api.time.com/wp-content/uploads/2014/02/frozen-let-it-go-covers.jpg)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://wallpaperscute.club/wp-content/uploads/2019/09/df577106d8fce564f4deb69ad8695888-507x641.jpg)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://etimg.etb2bimg.com/photo/72118626.cms)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://townsquare.media/site/442/files/2018/02/frozen-broadway.jpg?w=980&q=75)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://i.insider.com/52e981fe69beddf605e84e7a)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://i.pinimg.com/originals/4f/e0/5c/4fe05c0a2d170a2261e6501618f913bd.png)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://images.indianexpress.com/2019/11/Frozen-759-3.jpg)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://c4.wallpaperflare.com/wallpaper/317/743/712/movie-frozen-2-anna-frozen-elsa-frozen-kristoff-frozen-hd-wallpaper-preview.jpg)"></div>
-                      <div class="swiper-slide" style="background-image:url(https://cdn.wallpapersafari.com/47/90/ix2Q7m.jpg)"></div>
-                  </div>
-                  <!-- Add Pagination -->
-                  <div class="swiper-pagination"></div>
-                </div>
-              
-                <!-- Swiper JS -->
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-              
-                <script src="../package/swiper-bundle.min.js"></script>
-              
-                <!-- Initialize Swiper -->
-                <script>
-                  var swiper = new Swiper('.swiper-container', {
-                    effect: 'coverflow',
-                    grabCursor: true,
-                    centeredSlides: true,
-                    slidesPerView: 'auto',
-                    coverflowEffect: {
-                      rotate: 20,
-                      stretch: 0,
-                      depth: 200,
-                      modifier: 1,
-                      slideShadows: true,
-                    },
-                    loop:true,
-                    
-                  });
-                </script>
-              </body>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop:true,
+     
+    });
+  </script>
+</body>
+
+</html>
+
+     
+            
         </div>
 </div>
 
