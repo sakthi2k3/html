@@ -1,306 +1,71 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
-.wrp{
-  background: #171c24;
-  position: relative;
-  width: 100%;
-}
-.wrp nav1{
-  position: relative;
-  display: flex;
-  max-width: calc(100% - 200px);
-  margin: 0 auto;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
-}
-nav1 #c1{
-  display: flex;
-  align-items: center;
-}
-nav1 #c1 .links1{
-  margin-left: 80px;
-  display: flex;
-}
-#c1 .lgo a{
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-}
-#c1 .links1 li{
-  list-style: none;
-  line-height: 70px;
-}
-#c1 .links1 li a,
-#c1 .links1 li label{
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 9px 17px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-#c1 .links1 li label{
-  display: none;
-}
-#c1 .links1 li a:hover,
-#c1 .links1 li label:hover{
-  background: #323c4e;
-}
-.wrp .search1-icon,
-.wrp .menu-icon{
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-  line-height: 70px;
-  width: 70px;
-  text-align: center;
-}
-.wrp .menu-icon{
-  display: none;
-}
-.wrp #show-search1:checked ~ .search1-icon i::before{
-  content: "\f00d";
-}
-.wrp .search1-box1{
-  position: absolute;
-  height: 100%;
-  max-width: calc(100% - 50px);
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.wrp #show-search1:checked ~ .search1-box1{
-  opacity: 1;
-  pointer-events: auto;
-}
-.search1-box1 input{
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  color: #fff;
-  background: #171c24;
-  padding: 0 100px 0 15px;
-}
-.search1-box1 input::placeholder{
-  color: #f2f2f2;
-}
-.search1-box1 .go-icon{
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 60px;
-  width: 70px;
-  background: #171c24;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-.wrp input[type="checkbox"]{
-  display: none;
-}
-/* Dropdown Menu code start */
-#c1 .links1 ul{
-  position: absolute;
-  background: #171c24;
-  top: 80px;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-}
-#c1 .links1 li:hover > ul{
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.3s ease;
-}
-#c1 .links1 ul li a{
-  display: block;
-  width: 100%;
-  line-height: 30px;
-  border-radius: 0px!important;
-}
-#c1 .links1 ul ul{
-  position: absolute;
-  top: 0;
-  right: calc(-100% + 8px);
-}
-#c1 .links1 ul li{
-  position: relative;
-}
-#c1 .links1 ul li:hover ul{
-  top: 0;
-}
-/* Responsive code start */
-@media screen and (max-width: 1250px){
-  .wrp nav1{
-    max-width: 100%;
-    padding: 0 20px;
+  @media only screen and (min-width: 350px)
+  {
+     .yt{
+         margin: 15px;
+     }
+ 
   }
-  nav1 #c1 .links1{
-    margin-left: 30px;
-  }
-  #c1 .links1 li a{
-    padding: 8px 13px;
-  }
-  .wrp .search1-box1{
-    max-width: calc(100% - 100px);
-  }
-  .wrp .search1-box1 input{
-    padding: 0 100px 0 15px;
-  }
-}
-@media screen and (max-width: 900px){
-  .wrp .menu-icon{
-    display: block;
-  }
-  .wrp #show-menu:checked ~ .menu-icon i::before{
-    content: "\f00d";
-  }
-  nav1 #c1 .links1{
-    display: block;
-    position: fixed;
-    background: #14181f;
-    height: 100%;
-    width: 100%;
-    top: 70px;
-    left: -100%;
-    margin-left: 0;
-    max-width: 350px;
-    overflow-y: auto;
-    padding-bottom: 100px;
-    transition: all 0.3s ease;
-  }
-  nav1 #show-menu:checked ~ #c1 .links1{
-    left: 0%;
-  }
-  #c1 .links1 li{
-    margin: 15px 20px;
-  }
-  #c1 .links1 li a,
-  #c1 .links1 li label{
-    line-height: 40px;
-    font-size: 20px;
-    display: block;
-    padding: 8px 18px;
-    cursor: pointer;
-  }
-  #c1 .links1 li a.desktop-link{
-    display: none;
-  }
-  /* dropdown responsive code start */
-  #c1 .links1 ul,
-  #c1 .links1 ul ul{
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    background: none;
-    max-height: 0px;
-    overflow: hidden;
-  }
-  #c1 .links1 #show-features:checked ~ ul,
-  #c1 .links1 #show-services:checked ~ ul,
-  #c1 .links1 #show-items:checked ~ ul{
-    max-height: 100vh;
-  }
-  #c1 .links1 ul li{
-    margin: 7px 20px;
-  }
-  #c1 .links1 ul li a{
-    font-size: 18px;
-    line-height: 30px;
-    border-radius: 5px!important;
-  }
-}
-@media screen and (max-width: 400px){
-  .wrp nav1{
-    padding: 0 10px;
-  }
-  #c1 .lgo a{
-    font-size: 27px;
-  }
-  .wrp .search1-box1{
-    max-width: calc(100% - 70px);
-  }
-  .wrp .search1-box1 .go-icon{
-    width: 30px;
-    right: 0;
-  }
-  .wrp .search1-box1 input{
-    padding-right: 30px;
-  }
-}
-
-
-</style>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dropdown Menu with search1 Box | CodingNepal</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
-  <div class="wrp" style="z-index: 10;">
-    <nav1>
-      <input type="checkbox" id="show-search1">
-      <input type="checkbox" id="show-menu">
-      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+ 
+     
+ 
+    
+     @media only screen and (min-width: 992px)
+ {
+     .r1{
+           display: flex;
+           flex-flow: row;
+       }
+       .c1{
+           display: flex;
+           flex-flow: column;
+           font-size: xx-large;
+       }
+       .yt{
+           width:93%;
+           margin: 50px;
+       }
+       
+ 
+ }
+ 
       
-      <div class="content" id="c1">
-        <img src="https://cdn4.iconfinder.com/data/icons/planner-color/64/popcorn-movie-time-512.png" style="height: 75px; margin-right: 10px;" alt="lgo">
-
-      <div class="lgo"><a href="#">POP MOVIES</a></div>
-        <ul class="links1">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">List</a></li>
-
-          <li>
-            <a href="#" class="desktop-link">Features</a>
-            <input type="checkbox" id="show-features">
-            <label for="show-features">Features</label>
-            <ul>
-              <li><a href="#">Drop Menu 1</a></li>
-              <li><a href="#">Drop Menu 2</a></li>
-              <li><a href="#">Drop Menu 3</a></li>
-              <li><a href="#">Drop Menu 4</a></li>
-            </ul>
-          </li>
+      
+   </style>
+   
+ <div class="r1" style="background-color: azure; border: 3px solid rgb(0, 0, 0); margin: 4px; ">
+     <div class="c1">
+         <img src="https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810" ALIGN=”left”  alt="Los Angeles" style="width: 25vw; height: 30vw; float: left;  margin: 1px; margin-right: 10px;">
+     </div>
+     <div class="c1" >
+         <p>
+             Name: Frozen<br>
+             Genre: Adventure,Animated,Comedy<br>
+             ImbdRating: 7.4/10<br>
+             Director: Chris Buck, Jennifer Lee<br>
+             Writer: Chris Buck<br>
+             Running Time: 108 minutes<br>
          
-        </ul>
-      </div>
-      <label for="show-search1" class="search1-icon"><i class="fas fa-search"></i></label>
-      <form action="#" class="search1-box1">
-        <input type="text" placeholder="Type Something to search1..." required>
-        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-      </form>
-    </nav1>
-  </div>
-  <div>
-      <head>
+             Summary: When their kingdom becomes trapped in perpetual winter, fearless Anna (Kristen Bell) joins forces with mountaineer Kristoff (Jonathan Groff) and his reindeer sidekick to find Anna's sister, Snow Queen Elsa (Idina Menzel), and break her icy spell. Although their epic journey leads them to encounters with mystical trolls, a comedic snowman (Josh Gad), harsh conditions, and magic at every turn, Anna and Kristoff bravely push onward in a race to save their kingdom from winter's cold grip.<br>
+         </p>
+ 
+     </div>
+ </div>
+ <div class="r2">
+  <h1 class="h">
+      Trailer: 
+  </h1>  
+<iframe width="93%" height="500vw" src="https://www.youtube.com/embed/L0MK7qz13bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt"></iframe>
+</div>
+
+ 
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <meta charset="utf-8">
@@ -312,14 +77,7 @@ nav1 #c1 .links1{
 
   <!-- Demo styles -->
   <style>
-    body {
-      background: #fff;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
+   
 
     .swiper-container {
       width: 100%;
@@ -332,6 +90,7 @@ nav1 #c1 .links1{
       background-size: cover;
       width: 300px;
       height: 300px;
+      -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
 
     }
   </style>
@@ -368,28 +127,16 @@ nav1 #c1 .links1{
       centeredSlides: true,
       slidesPerView: 'auto',
       coverflowEffect: {
-        rotate: 50,
+        rotate: 20,
         stretch: 0,
-        depth: 100,
+        depth: 200,
         modifier: 1,
         slideShadows: true,
       },
       loop:true,
-     
+      
     });
   </script>
 </body>
 
-</html>
-
-     
-            
-        </div>
-</div>
-
-
-</html>
-</div>
-
-</body>
 </html>
