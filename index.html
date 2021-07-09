@@ -7,11 +7,18 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
     @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
 .wrp{
   background: #171c24;
   position: relative;
   width: 100%;
+  margin-bottom: 15px;
 }
 .wrp nav1{
   position: relative;
@@ -256,7 +263,6 @@ nav1 #c1 .links1{
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
   <div class="wrp" style="z-index: 10;">
     <nav1>
       <input type="checkbox" id="show-search1">
@@ -293,220 +299,150 @@ nav1 #c1 .links1{
       </form>
     </nav1>
   </div>
-  <div>
-
     <style>
-
-     .cr{
-                 display: flex;
-                 flex-flow: row;
-                 margin: 15px;
-                 
-             }
-     .cast-name{
-               
-                 margin: 10px;
-                 margin-top: 40px;
-
-         }
-        @media only screen and (min-width: 320px)
-        {
-           .yt{
-               margin: 13px;
-               height: 200px;
-           }
-           .p1{
-               font-size: small;
-           }
-       
+      * {
+        box-sizing: border-box;
+      }
+      
+      .column {
+        border-style: solid;
+        border-width: 3px;
+        float: left;
+        width: 24%;
+        padding: 10px;
+        height: 300px; 
+        
+      }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .row{
+          width:96%;
+          margin-left:16px;
+         
+       }
+        .column {
+          width: 48%;
+          height: 200px;
         }
-       
-           
-       @media only screen and (min-width:600px) and (max-width:950px)
-       {
-        .yt{
-                
-                height:300px;
-                margin: 20px;
-                
-            }
-           
+        .movie_image{
+            height: 72%;
+            width: 98%;
+            margin-bottom:1px;
+      
+      
+        }
+        .movie_name
+        {
+            font-size: large;
+        }
+      }
+       @media only screen and (min-width: 1000px)
+      {
+        .row{
+          width:96%;
+
+          margin-left:53px;
+         
        }
+          .movie_image{
+              width: 95%;
+              height: 80%;
+              margin: 7px;
+              margin-bottom:1px;
+          }
+      } 
+      @media only screen and (min-width:600px) and (max-width:990px)
+
+      {
+        .movie_name{
+          font-size: large
+        }
+        .column {
+          width: 24%;
+          height: 200px;
+        }
+        .row{
+          width:96%;
+
+          margin-left:25px;
+         
+       }
+          .movie_image{
+            height: 65%;
+            width: 98%;
+            margin-bottom:1px;
+      
+           }
+       
+      
+      }
+      
+      </style>
+      
+      
+      
+      <div class="row">
+        <div class="column">
+          <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+          <h2 class="movie_name" style="text-align:center;">Column 1</h2>
           
-           @media only screen and (min-width: 992px)
-       {
-           .r1{
-                 display: flex;
-                 flex-flow: row;
-             }
-             .c1{
-                 display: flex;
-                 flex-flow: column;
-                 font-size: xx-large;
-             }
-             .yt{
-                
-                 height:500px;
-                 margin: 50px;
-             }
-            .p1{
-                font-size: 27px;
-            } 
-             
-       
-       }
-       
-            
-            
-         </style>
-         
-       <div class="r1" style="background-color: azure; border: 3px solid rgb(0, 0, 0); margin: 4px; ">
-           <div class="c1">
-               <img src="https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810" ALIGN=”left”  alt="Los Angeles" style="width: 25vw; height: 30vw; float: left;  margin: 1px; margin-right: 10px;">
-           </div>
-           <div class="c1" >
-               <p class="p1">
-                   Name: Frozen<br>
-                   Genre: Adventure,Animated,Comedy<br>
-                   ImbdRating: 7.4/10<br>
-                   Director: Chris Buck, Jennifer Lee<br>
-                   Writer: Chris Buck<br>
-                   Running Time: 108 minutes<br>
-               
-                   Summary: When their kingdom becomes trapped in perpetual winter, fearless Anna (Kristen Bell) joins forces with mountaineer Kristoff (Jonathan Groff) and his reindeer sidekick to find Anna's sister, Snow Queen Elsa (Idina Menzel), and break her icy spell. Although their epic journey leads them to encounters with mystical trolls, a comedic snowman (Josh Gad), harsh conditions, and magic at every turn, Anna and Kristoff bravely push onward in a race to save their kingdom from winter's cold grip.<br>
-               </p>
-       
-           </div>
-       </div>
-       <div class="r2">
-        <h1 class="h">
-            Trailer: 
-        </h1>  
-      <iframe width="93%"  src="https://www.youtube.com/embed/L0MK7qz13bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt"></iframe>
+        </div>
+        <div class="column">
+          <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+          <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+          
+        </div>
+        <div class="column">
+          <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+          <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+          
+        </div>
+        <div class="column">
+          <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+          <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+          
+        </div>
       </div>
-      <div class="cast">
-        <h1>Top Cast:</h1>
-       <div class="cr">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQySNH8L3qCf37f87vk5c2RRbmrmLuWc93EC94HEPEehQVJICFD" alt="Avatar" style="width:100px;border-radius: 50%;">
-        <h1 class="cast-name">Kristen Bell</h1>
-    
-       </div> 
-       <div class="cr">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQySNH8L3qCf37f87vk5c2RRbmrmLuWc93EC94HEPEehQVJICFD" alt="Avatar" style="width:100px;border-radius: 50%;">
-        <h1 class="cast-name">Kristen Bell</h1>
-    
-       </div> 
-    
-       <div class="cr">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQySNH8L3qCf37f87vk5c2RRbmrmLuWc93EC94HEPEehQVJICFD" alt="Avatar" style="width:100px;border-radius: 50%;">
-        <h1 class="cast-name">Kristen Bell</h1>
-    
-       </div> 
-    
-       <div class="cr">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQySNH8L3qCf37f87vk5c2RRbmrmLuWc93EC94HEPEehQVJICFD" alt="Avatar" style="width:100px;border-radius: 50%;">
-        <h1 class="cast-name">Kristen Bell</h1>
-    
-       </div> 
-    
-       <div class="cr">
-        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQySNH8L3qCf37f87vk5c2RRbmrmLuWc93EC94HEPEehQVJICFD" alt="Avatar" style="width:100px;border-radius: 50%; " aling="left">
-        <h1 class="cast-name">Kristen Bell</h1>
-       </div>  
-       <a href="#" style="font-size: xx-large; color: rgb(255, 38, 38); margin: 20px;">Show More</a>
-    
-    </div>  
-
-
-
-    </div>
-      
-       
-       
-       
-      <!DOCTYPE html>
-      <html lang="en">
-      
-      <head>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-      
-        <meta charset="utf-8">
-        <title>Swiper demo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-      
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="../package/swiper-bundle.min.css">
-      
-        <!-- Demo styles -->
-        <style>
-         
-      
-          .swiper-container {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-          }
-      
-          .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
-            -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
-      
-          }
-        </style>
-      </head>
-      
-      <body>
-        <!-- Swiper -->
-        <div class="swiper-container">
-          <h1 class="h">
-            Galary: 
-        </h1>  
-          <div class="swiper-wrapper">
-              <div class="swiper-slide" style="background-image:url(https://api.time.com/wp-content/uploads/2014/02/frozen-let-it-go-covers.jpg)"></div>
-              <div class="swiper-slide" style="background-image:url(https://wallpaperscute.club/wp-content/uploads/2019/09/df577106d8fce564f4deb69ad8695888-507x641.jpg)"></div>
-              <div class="swiper-slide" style="background-image:url(https://etimg.etb2bimg.com/photo/72118626.cms)"></div>
-              <div class="swiper-slide" style="background-image:url(https://townsquare.media/site/442/files/2018/02/frozen-broadway.jpg?w=980&q=75)"></div>
-              <div class="swiper-slide" style="background-image:url(https://i.insider.com/52e981fe69beddf605e84e7a)"></div>
-              <div class="swiper-slide" style="background-image:url(https://i.pinimg.com/originals/4f/e0/5c/4fe05c0a2d170a2261e6501618f913bd.png)"></div>
-              <div class="swiper-slide" style="background-image:url(https://images.indianexpress.com/2019/11/Frozen-759-3.jpg)"></div>
-              <div class="swiper-slide" style="background-image:url(https://c4.wallpaperflare.com/wallpaper/317/743/712/movie-frozen-2-anna-frozen-elsa-frozen-kristoff-frozen-hd-wallpaper-preview.jpg)"></div>
-              <div class="swiper-slide" style="background-image:url(https://cdn.wallpapersafari.com/47/90/ix2Q7m.jpg)"></div>
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
+      <div class="row">
+          <div class="column">
+              <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+              <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+              
+            </div>
+            <div class="column">
+              <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+              <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+              
+            </div>
+            <div class="column">
+              <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+              <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+              
+            </div>
+            <div class="column">
+              <a href="#"><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_2z0JGSt1lS30w3WoY5xZunW-TC6UHlmMljda98-PRQ8MPtuRoDSWpeYmOe4WMO9TRw&usqp=CAU alt="img" class="movie_image"></a>
+              <h2 class="movie_name" style="text-align:center;">Column 1</h2>
+              
+            </div>
+        </div>
+        <div>
+          <ul class="pager">
+            <li><a href="#">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a></li>
+            <li><a href="#">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a></li>
+          </ul>    
         </div>
       
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-      
-        <script src="../package/swiper-bundle.min.js"></script>
-      
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-              rotate: 20,
-              stretch: 0,
-              depth: 200,
-              modifier: 1,
-              slideShadows: true,
-            },
-            loop:true,
-            
-          });
-        </script>
-      </body>
-      
-      </html>
-      </div>
-    
 
-</body>
 </html>
