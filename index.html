@@ -319,6 +319,21 @@ nav1 #c1 .links1{
         display: table;
         clear: both;
       }
+      .form-group input{
+        float: left;
+        margin: 11px;
+        width: 30%;
+        
+    }
+
+    .dropdown{
+        display: flex;
+        flex-flow: row;
+    }
+
+    .ls a{
+        font-size: xx-large;
+    }
       
       @media screen and (max-width: 600px) {
         .row{
@@ -347,7 +362,7 @@ nav1 #c1 .links1{
         .row{
           width:96%;
 
-          margin-left:53px;
+          margin-left:54px;
          
        }
           .movie_image{
@@ -370,7 +385,7 @@ nav1 #c1 .links1{
         .row{
           width:96%;
 
-          margin-left:27px;
+          margin-left:25px;
          
        }
           .movie_image{
@@ -385,7 +400,40 @@ nav1 #c1 .links1{
       
       </style>
       
-      
+      <div class="dropdown">
+        <div>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color: rgb(255, 255, 255); margin: 10px; background-color: rgb(0, 0, 0);">Genre
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Animation</a></li>
+                  <li><a href="#">Comedy</a></li>
+                  <li><a href="#">Crime</a></li>
+                  <li><a href="#">Documentary</a></li>
+                  <li><a href="#">Drama</a></li>
+                  <li><a href="#">Family</a></li>
+                  <li><a href="#">Fantasy</a></li>
+                  <li><a href="#">HistoryL</a></li>
+                  <li><a href="#">HorrorL</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li><a href="#">Mystery</a></li>
+                  <li><a href="#">Romance</a></li>
+                  <li><a href="#">Science Fiction</a></li>
+                  <li><a href="#">TV Movie</a></li>
+                  <li><a href="#">Thriller</a></li>
+                  <li><a href="#">War</a></li>
+                  <li><a href="#">Western</a></li>
+    
+    
+                </ul>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" name="search" style="width:20vw;">
+            <button type="submit" class="btn btn-default" style="margin: 11px;">Submit</button>
+        </div>
+          
+    </div>
       
       <div class="row">
         <div class="column">
