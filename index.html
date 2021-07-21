@@ -2,6 +2,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -12,10 +17,12 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 .wrp{
   background: #171c24;
   position: relative;
+  margin-bottom: 15px   ;
   width: 100%;
 }
 .wrp nav1{
@@ -118,7 +125,6 @@ nav1 #c1 .links1{
 .wrp input[type="checkbox"]{
   display: none;
 }
-/* Dropdown Menu code start */
 #c1 .links1 ul{
   position: absolute;
   background: #171c24;
@@ -150,7 +156,6 @@ nav1 #c1 .links1{
 #c1 .links1 ul li:hover ul{
   top: 0;
 }
-/* Responsive code start */
 @media screen and (max-width: 1250px){
   .wrp nav1{
     max-width: 100%;
@@ -207,7 +212,6 @@ nav1 #c1 .links1{
   #c1 .links1 li a.desktop-link{
     display: none;
   }
-  /* dropdown responsive code start */
   #c1 .links1 ul,
   #c1 .links1 ul ul{
     position: static;
@@ -262,7 +266,7 @@ nav1 #c1 .links1{
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-  <div class="wrp" style="z-index: 10;">
+  <div class="wrp" style="z-index: 20;">
     <nav1>
       <input type="checkbox" id="show-search1">
       <input type="checkbox" id="show-menu">
@@ -299,143 +303,228 @@ nav1 #c1 .links1{
     </nav1>
   </div>
   <div>
-</div>
+</div> 
 
-</body>
-</html>
-<style>
-  .heading{
-    margin-left: 7%;
-    font-size: xx-large;
-  }
-  .para
-  {
-    font-size:x-large; 
-    margin-left: 7%; 
-    margin-bottom: 10px ; 
-    margin-right: 4%;
 
-  }
-  @media only screen and (max-width:480px)
-  {
-    .heading{
-      font-size: x-large;
-    }
-    .para{
-      font-size: large;
-    }
+ <style>
+    .item active,.item{
+         height: 500px;
+     }
+   
+      @media only screen and (max-width:480px)
+    {
+        .item active,.item{
+         height: 200px;
+     }
+    } 
+    @media only screen and (min-width:480px) and (max-width:767px) {
+        .item active,.item{
+         height: 300px;
+     }
+        
+    }  
+
+ </style>
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="item active">
+          
+            <img src="https://www.cnet.com/a/img/nLXD_eUqNw5sXRcq1pnah2iV-k0=/940x0/2019/03/14/dd4d8d9c-5f16-4f6b-a7d8-65a00d095c2c/avengers-endgame-poster-square-crop.jpg" alt="img" style="width:1200px; height: 100%;" class="p_v">
+          
+      </div>
+
+      <div class="item">
+        <img src="https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1618331954249-7HO4QOCKSX7B2YO2J775/ke17ZwdGBToddI8pDm48kHGHo18jbK67Wx0qGoetYyMUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcXJneGfd2rOOEJK3eL1pTwcxT1fGBkQcjAK61Wesx40LVOG7onI8C79-5SdMEd4k_/up_ott.jpg" alt="img" style="width:1200px; height: 100%" class="pv">
+      </div>
     
-  }
-  
+      <div class="item">
+        <img src="https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="img" style="width:1200px; height: 100%;" class="pv">
+      </div>
+    </div>
 
-</style>
-<div>
-<h1 class="heading">
-    About Us:
-   <br> Creators:
-    
-<br>&nbsp;&nbsp;&nbsp;&nbsp;Sakthi Murugan
-<br>&nbsp;&nbsp;&nbsp;&nbsp;Sangeetha
-<br>Gmail: abc@gmail.com
-<br>GitHub: <a href="#" style="font-size: xx-large;">click here</a>
-</h1>
-<h1 class="heading">About the website:</h1>
-<p class="para" >
-    *This webiste is hosted through Heroko.<br>
-    *The movie images,details,ect is got through Themoviedb api.<br>
-    *This webiste is responive and works almost in all device.<br>
-    *Backend is done using python and Flask module is used for web application framework.<br>
-</p>
-<h1 class="heading">Website Images:</h1>
-
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="../package/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../package/swiper-bundle.min.css">
 
-<style>
+  <style>
     html,
     body {
       position: relative;
       height: 100%;
     }
 
-    *{
-     
+    body {
+      background: rgb(255, 255, 255);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
       margin: 0;
       padding: 0;
     }
 
     .swiper-container {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      
-      
-      margin-top: 10px;
+      width: 100%;
+      height: 51%;
     }
 
     .swiper-slide {
-      background-position: center;
-      background-size: cover;
+      text-align: center;
+      font-size: 18px;
+      background: rgb(255, 255, 255);
 
+     display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center; display: -webkit-box;
+      
     }
-    .ln{
-      font-size:x-large; 
-      margin-left: 7%; 
-      margin-bottom: 10px ; 
-      margin-top: 20px; 
-      padding-bottom: 10px;
+    @media only screen and (max-width:766px)
+    {
+        .swiper-container {
+         width: 90%;
+         height: 150px;
     }
-    @media only screen and (max-width:480px)
-  {
-    .ln{
-      font-size: large;
-      margin-left: 6%; 
-      margin-right: 2%;
+    .i{
+            width: 100px; 
+            height: 100px;
+         }
+    }
+    @media only screen and (min-width:500px) and (max-width:630px)
+    {
+      .i{
+            width: 150px; 
+            height: 100px;
+         }
+    }
+    @media only screen and (min-width:630px) and (max-width:770px)
+    {
+      .i{
+            width: 200px; 
+            height: 100px;
+         }
+    }
 
-    }
-    
-  }
+    @media only screen and (min-width:770px) and (max-width:1025px)
+       {
+        .swiper-container {
+         width: 90%;
+         height: 350px;
+       }
+       .i{
+            width: 250px; 
+            height: 200px;
+         }
+      }
+      
+    @media only screen and (min-width:1170px) 
+       {
+         .i{
+            width: 400px; 
+            height: 350px;
+         }
+
+       }    
   </style>
+</head>
 
-<div class="swiper-container">
+<body>
+  <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)"></div>
-      <div class="swiper-slide" style="background-image:url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+        <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+
+
     </div>
-    <div class="swiper-pagination" style="margin-bottom: -30px;"></div>
-    
-</div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
+      <div class="swiper-slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="1" style="width: 90%; height: 70%;"></div>
 
-<script src="../package/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
-<script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <script>
     var swiper = new Swiper('.swiper-container', {
-      effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },loop:true,
-
-
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
-</script>
+  </script>
+</body>
 
-
-<p class="ln">
-    These images are from this website application.
-</p>
+</html>
